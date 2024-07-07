@@ -8,21 +8,18 @@ body {
 }
 
 .container {
-    background: #fff;
-    background-image: url('/images/groceries.jpg');
-    background-position: center;
-    background-size: cover;
     padding: 20px;
     border-radius: 8px;
     text-align: justify;
+    background-image: url('/images/groceries.jpg');
+    background-position:center; ;
+    background-size: cover;
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
+input#itemInput{
     border: 1px solid black;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 button#addItemButton {
@@ -31,6 +28,17 @@ button#addItemButton {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
+    border-radius: 10px;
+}
+
+button#markPurchasedButton{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: purple;
 }
 
 button#clearListButton {
@@ -39,4 +47,5 @@ button#clearListButton {
     padding: 10px;
     margin: 5px ;
     border: 1px solid black;
+    border-radius: 10px;
 }
