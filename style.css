@@ -12,11 +12,13 @@ body {
     border-radius: 8px;
     text-align: center;
     width: 300px;
-    /* background-image: url('/images/groceries.jpg'); */
-    /* background-position:center; ; */
-    /* background-size: cover; */
+    background-position:center; ; 
+    background-size: cover; 
 }
 
+.container img{
+    width: auto;
+}
 .input-section{
     /* border: 1px solid black; */
     padding: 10px;
