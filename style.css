@@ -10,47 +10,31 @@ body {
 .container {
     padding: 20px;
     border-radius: 8px;
-    text-align: justify;
-    background-image: url('/images/groceries.jpg');
-    background-position:center; ;
-    background-size: cover;
+    text-align: center;
+    width: 300px;
+    /* background-image: url('/images/groceries.jpg'); */
+    /* background-position:center; ; */
+    /* background-size: cover; */
 }
 
-input#itemInput{
-    border: 1px solid black;
+.input-section{
+    /* border: 1px solid black; */
     padding: 10px;
-    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-button#addItemButton {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 4px;
+ul{
+    list-style-type: disc;
+    padding: 0px;
+    text-align: left;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+button{
     cursor: pointer;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-button#markPurchasedButton{
     padding: 10px;
-    margin: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 10px;
-    color: purple;
-}
-
-button#clearListButton {
-    cursor: pointer;
-    color: red;
-    padding: 10px;
-    margin: 5px ;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-.container ul {
-    list-style-type: none;
-    padding: 0;
+    border-radius: 8px;
 }
