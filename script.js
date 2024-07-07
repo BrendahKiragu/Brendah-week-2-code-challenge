@@ -6,30 +6,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearListButton = document.getElementById('clearListButton');
     const itemList = document.getElementById('itemList')
 
-    
+//now we create an array to store our items
+let itemsArray = [];
 
-//adds an item to list when Add button is clicked
+//renders the list items
+function renderItems() {
+        itemList.innerHTML = '';
+        itemsArray.forEach((item, index) => {
+            const option = document.createElement('option');
+            option.textContent = item.text;
+            if (item.purchased) {
+                option.style.textDecoration = 'line-through';
+            }
+            option.value = index; // Use index as the value to identify the option
+            itemList.appendChild(option);
+        });
+    }
+
+//Adds a new item to the array and updates the DOM
  function addItem() {
         const newItemText = itemInput.value.trim();
         if (newItemText === '') return; // Prevent adding empty items
 
-        const newItem = document.createElement('li');
-        newItem.textContent = newItemText;
-        itemList.appendChild(newItem);
-        itemInput.value = ''; // Clear the input field
+        itemsArray.push({text: newItemText, purchased: false})
+        itemInput.value = ''; //clears the input field
+        renderItems(); //updates the DOM
     }
 
  //marks all items in the list as  purchased by applying a line-through
 function markPurchased() {
-        const items = itemList.querySelectorAll('li');
-        items.forEach(item => {
-        item.style.textDecoration = 'line-through';
+       const selectedOptions = Array.from(itemList.selectedOptions);
+        selectedOptions.forEach(option => {
+            const index = option.value;
+            itemsArray[index].purchased = true;
         });
+        renderItems(); //updates the DOM
     }
 
 //clears all list items when Clear List button is clicked
 function clearList() {
-    itemList.innerHTML = '';
+    itemsArray= [];
+    renderItems(); //updates the DOM
 }
 
 //event listeners to handle click events on the buttons
@@ -45,3 +62,6 @@ itemInput.addEventListener('keypress', function(event){
 })
 
 })
+
+//initial render
+renderItems();
