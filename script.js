@@ -25,4 +25,9 @@ function markPurchased() {
         });
     }
 
+//clears all list items when Clear List button is clicked
+function clearList() {
+    itemList.innerHTML = '';
+}
+
 })
