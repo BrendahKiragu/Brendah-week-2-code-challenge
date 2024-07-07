@@ -1,8 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,44 +9,34 @@ body {
 
 .container {
     background: #fff;
+    background-image: url('/images/groceries.jpg');
+    background-position: center;
+    background-size: cover;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
+    text-align: justify;
 }
 
-input {
-    width: calc(100% - 60px);
+input[type="text"] {
+    width: 80%;
     padding: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
-button {
+button#addItemButton {
     padding: 10px;
-    margin-top: 10px;
+    margin: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    border: 1px solid black;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    background: #eaeaea;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-li.purchased {
-    text-decoration: line-through;
-    background: #d3ffd3;
-}
-
-li .edit {
+button#clearListButton {
     cursor: pointer;
-    margin-left: 10px;
-    color: blue;
+    color: red;
+    padding: 10px;
+    margin: 5px ;
+    border: 1px solid black;
 }
