@@ -4,11 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Shopping List</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
-  <div class="container">
-        <img src="images/groceries.jpg" alt="Shopping cart with groceries">
+  
+   <div class="container"> 
+    <!-- <img src="images/groceries.jpg" alt=""> -->
+    <h1>My Shopping List</h1>
+  
+    <input type="text" id="itemInput" placeholder="Add a new item...">
+
+    <div id="action-button">
+     <button id="addItemButton">Add item</button>
+     <button id="clearListButton">Clear cart</button>
+     <button id="markPurchasedButton">Mark Purchased</button>
+    </div>
+
+    <p>My cart</p>
+
+    <ul id="itemList"></ul>
+
+    </div>
+   
+
+ 
+        <!-- <img src="images/groceries.jpg" alt="Shopping cart with groceries">
 
            <input type="text" id="itemInput" placeholder="Add a new item...">
             <button id="addItemButton">Add</button>
@@ -23,8 +43,8 @@
         </div>
         </div>
 
-    <!-- <select id="itemList" size="5" multiple></select> -->
-     
+     <select id="itemList" size="5" multiple></select> -->
+    
     <script src="index.js"></script>
 </body>
 </html>
