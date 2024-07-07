@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const addItemButton = document.getElementById('addItemButton');
     const markPurchasedButton = document.getElementById('markPurchasedButton');
     const clearListButton = document.getElementById('clearListButton');
-    const itemList = document.querySelector('ul');
+    const itemList = document.getElementById('itemList')
+
+    
 
 //adds an item to list when Add button is clicked
  function addItem() {
@@ -35,7 +37,7 @@ addItemButton.addEventListener("click", addItem);
 markPurchasedButton.addEventListener("click", markPurchased);
 clearListButton.addEventListener("click", clearList);
 
-//
+//Enter key adds item
 itemInput.addEventListener('keypress', function(event){
     if (event.key === 'Enter'){
         addItem();
