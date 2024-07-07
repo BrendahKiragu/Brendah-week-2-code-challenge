@@ -30,4 +30,9 @@ function clearList() {
     itemList.innerHTML = '';
 }
 
+//event listeners to handle click events on the buttons
+addItemButton.addEventListener("click", addItem);
+markPurchasedButton.addEventListener("click", markPurchased);
+clearListButton.addEventListener("click", clearList);
+
 })
