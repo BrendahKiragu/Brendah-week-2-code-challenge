@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearListButton = document.getElementById('clearListButton');
     const itemList = document.querySelector('ul');
 
-//a fuction to add a new item to the list
+//adds an item to list when Add button is clicked
  function addItem() {
         const newItemText = itemInput.value.trim();
         if (newItemText === '') return; // Prevent adding empty items
@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         newItem.textContent = newItemText;
         itemList.appendChild(newItem);
         itemInput.value = ''; // Clear the input field
+    }
+
+ //marks all items in the list as  purchased by applying a line-through
+function markPurchased() {
+        const items = itemList.querySelectorAll('li');
+        items.forEach(item => {
+        item.style.textDecoration = 'line-through';
+        });
     }
 
 })
