@@ -35,4 +35,11 @@ addItemButton.addEventListener("click", addItem);
 markPurchasedButton.addEventListener("click", markPurchased);
 clearListButton.addEventListener("click", clearList);
 
+//
+itemInput.addEventListener('keypress', function(event){
+    if (event.key === 'Enter'){
+        addItem();
+    }
+})
+
 })
